@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="headInfo">
+    <image class="myImage" src="{{userInfo.avatarUrl}}" background-size="cover"    bindtap="pre" data-imgs="{{[userInfo.avatarUrl]}}" ></image>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+  <view class="funListItem" bindtap="myPub">
+    <view class="left">
+      <image class="leftImage" src="{{imgPath}}2.png" background-size="cover"></image>
+      <text>我的发布</text>
+    </view>
+    <image class="funImage" src="{{rightImg}}" background-size="cover"></image>
+  </view>
+  <view class="funListItem" bindtap="myPub">
+    <view class="left">
+      <image class="leftImage" src="{{imgPath}}2.png" background-size="cover"></image>
+      <text>我的商铺</text>
+    </view>
+    <image class="funImage" src="{{rightImg}}" background-size="cover"></image>
+  </view>
+  <view class="funListItem" bindtap="myPub">
+    <view class="left">
+      <image class="leftImage" src="{{imgPath}}2.png" background-size="cover"></image>
+      <text>我的说说</text>
+    </view>
+    <image class="funImage" src="{{rightImg}}" background-size="cover"></image>
+  </view>
+  <view class="spaceView">
+  </view>
+  <view class="funListItem" bindtap="pubj">
+    <view class="left">
+      <image class="leftImage" src="{{imgPath}}5.png" background-size="cover"></image>
+      <text>发布技巧</text>
+    </view>
+    <image class="funImage" src="{{rightImg}}" background-size="cover"></image>
+  </view>
+  <view class="spaceView">
+  </view>
+  <view class="funListItem"  bindtap="about">
+    <view class="left">
+      <image class="leftImage" src="{{imgPath}}6.png" background-size="cover"></image>
+      <text>关于我们</text>
+    </view>
+    <image class="funImage" src="{{rightImg}}" background-size="cover"></image>
+  </view>
+  <view class="funListItem">
+    <view class="left">
+      <image class="leftImage" src="{{imgPath}}3.png" background-size="cover"></image>
+      <text>联系客服</text>
+    </view>
+    <contact-button type="default-dark" size="27" session-from="weapp"   >  
+    </contact-button>
+  </view>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__text">{{wappName}}</navigator>
+    </view>
+    <view class="weui-footer__text">Copyright © 2016-2017 rus58.com</view>
+  </view>
+</view>

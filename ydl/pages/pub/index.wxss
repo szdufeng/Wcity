@@ -1,0 +1,56 @@
+.type {
+  padding-top: 40rpx;
+   
+  color: gray;
+}
+
+.typeRowMain {
+  padding-left: 80rpx; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+}
+
+.typeRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.typeRowItem {
+  padding: 10rpx; 
+  margin: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.subView {
+  width: 600rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 1rpx solid #d0d0d0;
+  border-radius: 2%;
+}
+
+.subRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subRowItem {
+  padding: 10rpx;
+  border-radius: 10%;
+}
+
+.ItemImage {
+  width: 108rpx;
+  height: 108rpx;
+}
+
+

@@ -1,0 +1,21 @@
+.mainView {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.subwayView {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:  center;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.subway {
+  padding: 20rpx;
+}
+
+.picView {
+  background-color: white;
+}

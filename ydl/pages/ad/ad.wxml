@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="page">
+    <view class="page__bd">
+      <view class="weui-article">
+        <view class="adTitleTxt">
+          <text>{{adContent.title}}</text>
+        </view>
+        <view class="weui-article__section">
+          <view wx:for="{{adContent.remarkWapp}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+
+            <view wx:if="{{!item.isImage}}" class="weui-article__p">{{item.txt}}</view>
+            <image wx:if="{{item.isImage}}" bindtap="pre" data-url="{{item.txt}}"  src="{{item.txt}}" mode="widthFix" style="width: 100%" />
+          </view>
+          <view class="spaceView">
+          </view>
+          <view class="adWeixinView" bindtap="copyClick" data-weixin="{{adContent.weixin}}">
+            <text>如需合作，请联系微信：{{adContent.weixin}}</text>
+            <image class="adTelImage" src="{{imgPath}}{{copyImage}}.png"></image>
+          </view>
+          <view class="adWeixinView" bindtap="copyClick" data-weixin="{{adContent.person}}">
+            <text>联系人：{{adContent.person}}</text>
+          </view>
+          <view class="adTelView">
+            <view class="adTel" bindtap="telClick" data-tel="{{adContent.tel}}">
+              <text>国内电话</text>
+              <image class="adTelImage" src="{{imgPath}}tel2.png"></image>
+              <image class="adRightImage" src="{{imgPath}}right1.png"></image>
+            </view>
+          </view>
+          <view wx:if="{{adContent.tel_out.length>0}}" class="adTelView">
+            <view class="adTel" bindtap="telClick" data-tel="{{adContent.tel_out}}">
+              <text>{{conturyName}}电话</text>
+              <image class="adTelImage" src="{{imgPath}}tel2.png"></image>
+              <image class="adRightImage" src="{{imgPath}}right1.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

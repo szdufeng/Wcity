@@ -1,0 +1,104 @@
+<view class="container">
+  <swiper wx:if="{{pics.length>0}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper">
+    <block wx:for="{{pics}}" wx:for-item="item" wx:key="unique" wx:for-index="subidx1">
+      <swiper-item>
+        <image src="{{item}}" bindtap="pre" data-imgs="{{pics}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="infoDate">
+    <view class="infoHead">
+      <image wx:if="{{data.wappImage!=null && data.wappImage.length>0}}" class="headImage" src="{{data.wappImage}}" bindtap="pre" data-imgs="{{[data.wappImage]}}"></image>
+      <view class="infoHead1">
+        <text class="leftText" wx:if="{{data.wappNiname!=null && data.wappNiname.length>0}}">{{data.wappNiname}}</text>
+        <text class="leftText1">{{data.dateStr}}</text>
+      </view>
+    </view>
+    <view>
+      <button wx:if="canIUse" open-type="share" type="primary" size="mini" plain="true">发给好友</button>
+    </view>
+  </view>
+  <view class="infoView">
+    <view class="infoTitle">
+      <text>{{data.title}}</text>
+    </view>
+    <view class="infoLx">
+      <view>
+        <text class="leftText">联系人：</text>
+        <text wx:if="{{data.person!=null && data.person.length>0}}" class="leftText">{{data.person}}</text>
+      </view>
+      <view class="telView" bindtap="copyClick" data-weixin="{{data.weixin}}" wx:if="{{data.weixin!=null && data.weixin.length>0}}">
+        <text class="weixinText">微信号：</text>
+        <text class="weixinText" bindtap="copyTxt" selectable="true">{{data.weixin}}</text>
+        <image class="telImage" src="{{imgPath}}{{copyImage}}.png"></image>
+      </view>
+    </view>
+    <view class="infoLx" wx:if="{{data.tel!=null && data.tel.length>0}}">
+      <view>
+        <text class="leftText">电话：</text>
+        <text class="leftText">{{data.tel}}</text>
+      </view>
+      <view class="telView" bindtap="call">
+        <image class="telImage" src="{{imgPath}}tel1.png"></image>
+        <text hidden="{{data.telCount==0}}">{{data.telCount}}</text>
+      </view>
+    </view>
+    <view class="infoLx">
+      <view class="infoAddress">
+        <text class="leftText">地址：</text>
+        <view class="infoAddressItem" bindtap="openMap">
+          <view class="infoAddressLeft">
+            <text>{{data.city}}</text>
+            <text wx:if="{{data.address.address!=null}}">{{data.address.address}}</text>
+          </view>
+        </view>
+      </view>
+      <image class="telImage" bindtap="openMap" src="{{imgPath}}pos.png" wx:if="{{data.address.address!=null}}"></image>
+    </view>
+    <view class="infoRemark">
+      <text class="leftText">详情：</text>
+      <text>{{data.remark}}</text>
+    </view>
+  </view>
+  <view class="commTitle">
+    <view class="zhanView">
+      <text class="title">用户评价</text>
+      <text wx:if="{{data.PublishComms.length>0}}">({{data.PublishComms.length}})</text>
+    </view>
+    <view class="zhanView">
+      <view class="ZView">
+        <image class="telImage" bindtap="Zclick" src="{{imgPath}}zhan.png"></image>
+        <text class="countTxt">{{data.ZCount}}</text>
+      </view>
+      <view class="ZView">
+        <image class="telImage" bindtap="Xclick" src="{{imgPath}}xia.png"></image>
+        <text class="countTxt">{{data.XCount}}</text>
+      </view>
+      <view class="ZView">
+        <button bindtap="commBtn"  type="primary" size="mini" plain="true" hover-class="other-button-hover">写评价</button>
+      </view>
+    </view>
+  </view>
+  <view class="commList">
+    <view wx:if="{{data.PublishComms.length==0}}" class="noComm">暂时还没有用户评价... ...</view>
+    <view wx:if="{{data.PublishComms.length>0}}">
+      <view wx:for="{{data.PublishComms}}" wx:for-item="item" wx:key="unique" wx:for-index="idx" class="commRow">
+        <view class="userInfo">
+          <view class="userV">
+            <image class="headImage" src="{{item.wappImage}}" bindtap="pre" data-imgs="{{[item.wappImage]}}"></image>
+            <text>{{item.wappNiname}}</text>
+          </view>
+          <text>{{item.dateStr}}</text>
+        </view>
+        <view class="commInfo">
+          <text>{{item.remark}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<modal hidden="{{needComm}}" title="用户评价" confirm-text="发布" cancel-text="取消" bindcancel="cancelCommClick" bindconfirm="commSubmit">
+  <view class="bottomModalView">
+    <textarea class="textareaB" value="{{commStr}}" maxlength="-1" bindinput="commInput" />
+  </view>
+</modal>

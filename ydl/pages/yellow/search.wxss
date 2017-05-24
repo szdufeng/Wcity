@@ -1,0 +1,100 @@
+.searchBar {
+  padding: 10rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+ 
+
+.searchInfoView {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.searchInfoTxt {
+  padding-left: 6rpx;
+  padding-right: 6rpx;
+}
+
+.searchInfoRedTxt {
+  color: red;
+  padding-left: 6rpx;
+  padding-right: 6rpx;
+}
+
+.searchResultView {
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ItemViewRow {
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.ItemViewRowLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ItemViewRowImage {
+  padding: 10rpx;
+}
+
+.ItemViewRowName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.nameTxt {
+  font-size: 14pt;
+}
+
+.addressTxt {
+  color: gray;
+}
+
+
+.telTxt {
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ItemViewRowRight {
+  width: 60rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  justify-content: flex-start;
+}
+
+.listImage {
+  width: 80rpx;
+  height: 80rpx;
+  padding-right: 10rpx;
+}
+
+.telImage {
+  width: 48rpx;
+  height: 48rpx;
+  padding-right: 10rpx;
+}

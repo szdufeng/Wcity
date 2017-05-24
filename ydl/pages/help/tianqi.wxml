@@ -1,0 +1,68 @@
+<view class="container">
+  <view class="headView">
+    <text>{{tianqiData.basic.city}}</text>
+    <view class="headDateView">
+      <text>{{curWeek}}</text>
+      <text>{{curDate}}</text>
+    </view>
+  </view>
+  <view class="mainView">
+    <view class="mainLeftView">
+      <view class="mainLeftImgView">
+        <image class="wMainImage" src="{{weatherImgPath}}{{tianqiData.hourly_forecast[0].cond.code}}.png" background-size="cover"></image>
+        <view class="wMainImageTxt">
+          <text>{{tianqiData.hourly_forecast[0].wind.dir}}</text>
+          <text>{{tianqiData.hourly_forecast[0].wind.sc}}</text>
+        </view>
+      </view>
+      <view class="mainLeftTxtView">
+        <text>{{tianqiData.hourly_forecast[0].tmp}}℃</text>
+      </view>
+    </view>
+    <view class="mainRightView">
+      <view wx:for="{{tianqiData.hourly_forecast}}" class="hourView" wx:for-item="item" wx:key="unique" wx:for-index="idx1">
+        <view class="hourDate">
+          <text>{{item.date}}</text>
+        </view>
+        <view class="hourInfo">
+          <image class="wHourImage" src="{{weatherImgPath}}{{item.cond.code}}.png" background-size="cover"></image>
+          <text>{{item.tmp}}℃</text>
+          <text>{{item.wind.dir}}</text>
+          <text>{{item.wind.sc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="daysTitle">
+          <text>三天天气预报</text>
+  </view>
+  <view class="daysView">
+    <view wx:for="{{tianqiData.daily_forecast}}" wx:for-item="item" class="dayView" wx:key="unique" wx:for-index="idx1">
+      <text class="dayDate">{{item.date}}</text>
+      <view class="dayInfo">
+        <view class="dayItem">
+          <image class="wHourImage" src="{{weatherImgPath}}{{item.cond.code_d}}.png" background-size="cover"></image>
+          <image wx:if="{{item.cond.code_d!=item.cond.code_n}}" class="wHourImage" src="{{weatherImgPath}}{{item.cond.code_n}}.png" background-size="cover"></image>
+        </view>
+        <view class="dayItem">
+          <text>{{item.tmp.min}}</text>
+          <text>~</text>
+          <text>{{item.tmp.max}}℃</text>
+        </view>
+        <view class="dayItem">
+          <text>{{item.wind.dir}}</text>
+          <text>{{item.wind.sc}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <scroll-view scroll-y="true" class="cityView">
+      <view wx:for="{{citys}}" wx:for-item="item1" wx:key="unique" wx:for-index="idx1" class="cityViewRow">
+        <view wx:for="{{item1}}" wx:for-item="item2" wx:key="unique" wx:for-index="idx2" class="cityViewRowItem" data-row="{{idx1}}" data-cityid="{{item2.id}}" bindtap="pClick">
+          <text>{{item2.cityZh}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

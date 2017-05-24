@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="mainview">
+    <scroll-view scroll-y="true" style="height: {{mainHeight}}px;">
+      <view class="infoTitle">
+        <text>{{data.title}}</text>
+      </view>
+      <view class="shareView">
+        <view class="infoDate">
+          <image wx:if="{{data.wappImage!=null && data.wappImage.length>0}}" class="headImage" src="{{data.wappImage}}" bindtap="pre" data-imgs="{{[data.wappImage]}}"></image>
+
+          <view class="infoHead">
+            <text class="leftText" wx:if="{{data.wappNiname!=null && data.wappNiname.length>0}}">{{data.wappNiname}}</text>
+
+            <text class="leftText">{{data.dateStr}}</text>
+          </view>
+        </view> <view>
+        <button wx:if="canIUse" open-type="share" type="primary" size="mini" plain="true">分享</button>
+      </view> </view>
+
+      <view class="infoRemark">
+        <text>{{data.remark}}</text>
+      </view>
+      <view wx:for="{{pics}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+        <image bindtap="pre" data-url="{{item}}" src="{{item}}" mode="widthFix" style="width: 100%" />
+      </view>
+      <view class="spaceView">
+      </view>
+      <view class="commTitle">
+        <text>评论</text>
+      </view>
+      <view wx:if="{{data.userComms.length==0}}" class="noComm">暂时还没有用户评价... ...</view>
+      <view wx:if="{{data.userComms.length>0}}">
+        <view wx:for="{{data.userComms}}" wx:for-item="item" wx:key="unique" wx:for-index="idx" class="commRow">
+
+          <image class="headImage" src="{{item.wappImage}}" bindtap="pre" data-imgs="{{[item.wappImage]}}"></image>
+          <view class="comminfo">
+            <view class="commUser">
+              <text>{{item.wappNiname}}</text>
+              <text>{{item.dateStr}}</text>
+            </view>
+            <view class="commRemark">
+              <text>{{item.remark}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="phcommView">
+    <input class="phcommTxt" placeholder="说点什么，鼓励楼主" bindfocus="commBtn" value="{{commStr}}"></input>
+    <image class="ZImage" bindtap="Zclick" src="{{zImgPath}}.png"></image>
+  </view>
+</view>
+<modal hidden="{{needComm}}" title="评价" confirm-text="发布" cancel-text="取消" bindcancel="cancelCommClick" bindconfirm="commSubmit">
+  <view class="bottomModalView">
+    <textarea class="textareaB" value="{{commStr}}" maxlength="-1" bindinput="commInput" placeholder="说点什么，鼓励楼主" />
+  </view>
+</modal>

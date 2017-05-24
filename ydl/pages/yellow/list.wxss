@@ -1,0 +1,83 @@
+ 
+
+.searchResultView {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ItemViewRow {
+  width: 100%;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.ItemViewRowLeft {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.ItemViewRowImage {
+  padding-right: 30rpx;
+}
+
+.ItemViewRowName {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nameTxt {
+  font-size: 13pt;
+  margin-bottom: 10rpx;
+}
+
+.addressTxt {
+  
+  color: gray;
+}
+
+.telTxt {
+  
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ItemViewRowRight {
+  width: 60rpx;
+   margin-right: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.listImage {
+  width: 120rpx;
+  height: 164rpx;
+  margin: 10rpx;
+}
+
+.telImage {
+  width: 48rpx;
+  height: 48rpx; 
+}
+ 
+.b22 {
+  padding-right: 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:    flex-end;
+  justify-content: center  ;
+  background-color: #fff;
+  border-bottom: 1rpx solid #d0d0d0;
+}

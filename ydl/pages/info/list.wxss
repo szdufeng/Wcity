@@ -1,0 +1,105 @@
+.addView {
+  position: fixed;
+  width: 120rpx;
+  height: 120rpx;
+  z-index: 500;
+  bottom: 40rpx;
+  right: 40rpx;
+  background-color: #8fc9c6;
+  background: rgba(143, 201, 198, 0.8);
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content:  center;
+}
+
+.addImage {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.listView {
+  margin: 10rpx;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.listImageView {
+  margin-right: 20rpx;
+}
+
+.listImage {
+  width: 120rpx;
+  height: 164rpx;
+}
+
+.listRemarkView { 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:  flex-start;
+  margin-right: 10rpx;
+}
+
+.listTitle {
+  font-size: 13pt;
+  margin-bottom: 10rpx;
+}
+ 
+
+.listRight {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+
+.listData {
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  color:gray;
+}
+
+.listTel {
+  color: gray;
+  margin: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.noDataView {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80rpx;
+  font-size: 16pt;
+  align-items: center;
+  color: gray;
+}
+
+.nodataimg {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+}
+
+.b22 {
+  padding-right: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #fff;
+  border-bottom: 1rpx solid #d0d0d0;
+}

@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="searchConfirm" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <view class="searchView">
+    <view class="searchInfoView">
+      <text class="searchInfoTxt">关键字</text>
+      <text class="searchInfoRedTxt">{{key}}</text>
+      <text class="searchInfoTxt">共找到</text>
+      <text class="searchInfoRedTxt">{{ypData.length}}</text>
+      <text class="searchInfoTxt">条数据</text>
+    </view>
+    <view class="searchResultView">
+      <view wx:for="{{ypData}}" wx:for-item="item" wx:key="unique" wx:for-index="idx" class="ItemViewRow">
+        <view class="ItemViewRowLeft" bindtap="ypClick" data-index="{{idx}}">
+          <view class="ItemViewRowImage">
+            <image mode="scaleToFill" class="listImage" src="{{item.logoImg}}"></image>
+          </view>
+          <view class="ItemViewRowName">
+            <text class="nameTxt">{{item.name}}</text>
+            <text class="addressTxt">{{item.address}}</text>
+            <view class="telTxt">
+              <text>{{item.tel}}</text>
+            <view style="padding-left: 16rpx;" hidden="{{item.clickCount==0}}">(浏览次数:
+              <text class="numColor">{{item.clickCount}})</text>
+            </view>
+            </view>
+          </view>
+        </view>
+        <view class=" ItemViewRowRight ">
+          <image class="telImage " bindtap="call" data-index="{{idx}}" src="{{imgPath}}tel1.png"></image>
+          <text  class="numColor" hidden="{{item.telCount==0}}">{{item.telCount}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

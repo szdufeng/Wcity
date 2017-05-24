@@ -1,0 +1,192 @@
+<view class="container">
+
+  <view class="mainView">
+    <view class="itemView">
+      <view class="itemL">
+        <text>选择类型</text>
+      </view>
+      <view class="itemC">
+        <picker bindchange="typePickerChange" value="{{typeIndex}}" range="{{typeDataStr}}">
+          <view class="picker">
+            <text>{{typeData[typeIndex].name}}</text>
+          </view>
+        </picker>
+      </view>
+      <view class="itemR">
+        <text class="rightJia">></text>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>名称</text>
+      </view>
+      <view class="itemC" bindtap="remarkTap" data-n="title">
+        <label style="{{remarkColor1}}">{{title}}</label>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>营业时间</text>
+      </view>
+      <view class="itemC">
+        <input data-n="dates" bindinput="hadInput" placeholder="请输入营业时间" />
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>服务介绍</text>
+      </view>
+      <view class="itemC" bindtap="remarkTap" data-n="remark">
+        <label style="{{remarkColor2}}">{{remark}}</label>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>商铺图片</text>
+      </view>
+      <view class="itemCForPicc">
+        <view class="weui-uploader">
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for-items="{{makerImages}}" wx:key="{{index}}">
+                <view class="weui-uploader__file" id="{{item}}" style="position: relative;margin-right: 10px;">
+                  <image data-url="{{item.localFile}}" data-index="{{index}}" class="weui-uploader__img" data-t="maker"  bindtap="previewImage" src="{{item.localFile}}" mode="aspectFill" />
+                  <view data-index="{{index}}" class="weui-badge" data-t="maker" bindtap="delPic" style="position: absolute;bottom: +0.1em;right: +0.1em;">-</view>
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box">
+              <text class="upText">添加图片</text>
+              <view class="weui-uploader__input" data-t="maker"  bindtap="chooseImage">
+              </view>
+            </view>
+          </view>
+        </view>
+        <text class="itemCForTxt">用于展示您的商铺，请选择或拍摄横向图片</text>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>商家类型</text>
+      </view>
+      <view class="itemC">
+        <radio-group class="radio" data-t="maker" bindchange="radioChange">
+          <label wx:for="{{makerTypes}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>配送方式</text>
+      </view>
+      <view class="itemC">
+        <radio-group class="radio" data-t="send" bindchange="radioChange">
+          <label wx:for="{{sendTypes}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>支付方式</text>
+      </view>
+      <view class="itemC">
+        <radio-group class="radio" data-t="pay" bindchange="radioChange">
+          <label wx:for="{{payTypes}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>商品图片</text>
+      </view>
+      <view class="itemCForPicc">
+        <view class="weui-uploader">
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for-items="{{productImages}}" wx:key="{{index}}">
+                <view class="weui-uploader__file" id="{{item}}" style="position: relative;margin-right: 10px;">
+                  <image data-url="{{item.localFile}}" data-index="{{index}}" class="weui-uploader__img" data-t="product"  bindtap="previewImage" src="{{item.localFile}}" mode="aspectFill" />
+                  <view data-index="{{index}}" class="weui-badge" data-t="product"  bindtap="delPic" style="position: absolute;bottom: +0.1em;right: +0.1em;">-</view>
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box">
+              <text class="upText">添加图片</text>
+              <view class="weui-uploader__input" data-t="product"  bindtap="chooseImage">
+              </view>
+            </view>
+          </view>
+        </view>
+        <text class="itemCForTxt">用于展示您的商品，请选择或拍摄横向图片</text>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>所在城市</text>
+      </view>
+      <view class="itemC">
+        <picker bindchange="bindPickerChange" value="{{cityIndex}}" range="{{citys}}">
+          <view class="picker">
+            <text>{{citys[cityIndex]}}</text>
+          </view>
+        </picker>
+      </view>
+      <view class="itemR">
+        <text class="rightJia">></text>
+      </view>
+    </view>
+    <view class="itemView" bindtap="openMap">
+      <view class="itemL">
+        <text>详细地址</text>
+      </view>
+      <view class="itemC">
+        <text>{{address.address}}</text>
+      </view>
+      <view class="itemR">
+        <text class="rightJia">></text>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>联系人</text>
+      </view>
+      <view class="itemC">
+        <input data-n="person" bindinput="hadInput" placeholder="请输入联系人" />
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>联系电话</text>
+      </view>
+      <view class="itemC">
+        <input data-n="tel" bindinput="hadInput" placeholder="请输入电话" type="number" />
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>微信号</text>
+      </view>
+      <view class="itemC">
+        <input data-n="weixin" bindinput="hadInput" placeholder="请输入微信号(选填)" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-footer">
+    <view class="publishBtnView">
+      <view class="publishBtn" bindtap="publishBtn">确定发布</view>
+    </view>
+  </view>
+  <modal hidden="{{needRemark}}" title="{{RemarkTitle}}" confirm-text="确定" bindconfirm="remarkconfirm" no-cancel>
+    <view class="bottomModalView">
+      <textarea class="textareaB" value="{{RemarkTxt}}" maxlength="-1" bindinput="remarkInput" bindconfirm="remarkconfirm" />
+    </view>
+  </modal>
+  <modal hidden="{{chexkNext}}" title="{{infoTxt}}" confirm-text="确定" bindconfirm="infoconfirm" no-cancel>
+  </modal>
+</view>

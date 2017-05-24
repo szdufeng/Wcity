@@ -1,0 +1,18 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="headView">
+    <text>{{subways[selectIndex].city}}铁线路图</text>
+    <text> </text>
+  </view>
+  <view class="mainView">
+    <view class="subwayView">
+      <view wx:for="{{subways}}" wx:for-item="item1" wx:key="unique" wx:for-index="idx1" class="subway">
+        <text data-i="{{idx1}}" bindtap="selectCity">{{item1.city}}</text>
+      </view>
+    </view>
+    <view class="picView">
+      <image id="SFimg" mode="aspectFit" bindtap="openPic"   bindload="imgload" style="width:{{scaleWidth}}px;height:{{scaleHeight}}px" src="{{dataimg}}"></image>
+    </view>
+  </view>
+</view>

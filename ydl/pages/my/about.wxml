@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="mainClass">
+    <view class="titleView">
+      <text>{{wappName}}是由国内海外传媒第一平台：时代创想传媒有限公司 独家倾力打造的{{wappName}}华人圈首个微信小程序</text>
+    </view>
+    <view class="aClass">
+      <text class="txtView1">
+        "{{wappName}}"致力于打造{{wappName}}覆盖全{{wappName}}最广的生活本地服务平台</text>
+      <text class="txtView">"{{wappName}}"微信 小程序特点：</text>
+      <text class="txtView">发布简单 使用方便，</text>
+      <text class="txtView">拥有{{wappName}}最大的用户群，</text>
+      <text class="txtView">有"{{wappName}}"致庞大用户群，</text>
+      <text class="txtView">还愁工作找不到 房子出租不去吗？</text>
+      <text class="txtView">这款微信小程序将彻底改变你在{{wappName}}的生活方式</text>
+      <text class="txtView1">有房要出租，有二手闲置 有要招聘求职的 赶紧来免费发布吧！</text>
+      <text class="txtView">不仅如此</text>
+      <text class="txtView">"{{wappName}}"小程序 可收纳所有您在{{wappName}}需要的那些查汇率 查地铁图 中意翻译等各种必备功能</text>
+      <text class="txtView1">一键式 扫码 登录 访问简单、便捷 基本不占内存哦</text>
+      <text class="txtView">如果您对我们的产品有什么好的建议和意见反馈随时可以与我们联系</text>
+    </view> 
+    <view class="adWeixinView">
+    联系人: 薛育明
+    </view>
+    <view class="adWeixinView">
+       邮箱：736912513@qq.com 
+    </view>
+   
+        <include src="/pages/common/link.wxml"/>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="headView">
+    <text>请在文本框中输入{{tranTopTxt}}</text>
+    <text> </text>
+  </view>
+  <form bindsubmit="tranClick">
+    <view class="oriview">
+      <view class="oritextarea">
+        <textarea name="myoritext" bindconfirm="hadConfirm" bindinput="hadInput" focus="{{openKeyword}}" style="width:96%;height: 220rpx; " placeholder="请输入文本" />
+      </view>
+      <view class="oriBtnView">
+        <button type="primary" formType="submit" loading="{{istraning}}">翻译</button>
+      </view>
+    </view>
+  </form>
+  <view class="tranView">
+    <text style="margin-bottom: 10rpx;">译文：</text>
+    <view class="tranResult">
+      <view class="tranText">
+        <text>{{thisTranData.tran}}</text>
+      </view>
+      <view class="tranSoundView" wx:if="{{ishadtran && needLangTTS}}">
+        <image class="imageIcon" bindtap="soundClick" src="{{imgPath}}{{soundndImage}}.png"></image>
+        <image class="imageIcon1" bindtap="copyClick" src="{{imgPath}}{{copyImage}}.png"></image>
+      </view>
+    </view>
+  </view>
+</view>

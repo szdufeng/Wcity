@@ -1,0 +1,44 @@
+
+.spaceView {
+  height: 20rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+.adWeixinView {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+.adTelView {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.adTel {
+  padding: 6rpx;
+  padding-left: 26rpx;
+  padding-right: 26rpx;
+  border-radius: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  background-color: #8fc9c6;
+  color: white;
+}
+
+.adTelImage {
+  width: 42rpx;
+  height: 42rpx;
+  margin: 16rpx;
+}
+
+.adRightImage {
+  width: 36rpx;
+  height: 36rpx;
+  margin: 6rpx;
+}

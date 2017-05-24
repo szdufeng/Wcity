@@ -1,0 +1,63 @@
+.pageHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cur_main {
+  padding: 28rpx;
+  background-color: #fcfffc;
+  border-top: 1rpx solid #d0d0d0;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.nameTxt {
+  margin-top: 5rpx;
+}
+
+.cur_logo {
+  width: 72rpx;
+  height: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+.currencyList {
+  margin-top: 6 rpx;
+}
+
+.rowList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemImage {
+  display: flex;
+  flex-direction: column;
+  text-align: center; 
+  align-items: center;
+  font-size: 10pt;
+}
+
+.line {
+  height: 0rpx;
+  width: 100%;
+}
+.weui-grids {
+  border-top: 1rpx solid #d9d9d9;
+  border-left: 1rpx solid #d9d9d9;
+  overflow: hidden;
+}
+
+.weui-grid {
+  position: relative;
+  width: 33.3333%;
+  height: 140rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  border-right: 1rpx solid #d9d9d9;
+  border-bottom: 1rpx solid #d9d9d9;
+} 

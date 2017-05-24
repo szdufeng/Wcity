@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="headView">
+    <text>请点击您的发布类别</text>
+    <text> </text>
+  </view>
+  <view class="type">
+    <view wx:for="{{projects}}" wx:for-item="item1" wx:key="unique" wx:for-index="idx1" class="typeRowMain">
+      <view class="typeRow">
+        <view wx:for="{{[0,1,2]}}" wx:key="*this" wx:for-item="i"  data-row="{{idx1}}" wx:for-index="idx2"  class="typeRowItem" data-mainType="{{item1[i].i}}" data-mainName="{{item1[i].name}}"  bindtap="pClick" wx:if="{{(idx1<2) ||(idx1==2 && idx2==0)}}" hidden="{{item1[i].i==8}}" >
+          <image class="ItemImage" src="{{imgPath}}{{item1[i].img}}" background-size="cover"></image>
+          <text class="ItemTxt">{{item1[i].name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

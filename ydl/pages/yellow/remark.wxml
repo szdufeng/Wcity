@@ -1,0 +1,75 @@
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:for-item="item" wx:key="unique" wx:for-index="subidx1">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"  bindtap="pre" data-imgs="{{imgUrls}}"  />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="ypView">
+    <view class="ypTitle">
+      <text class="title">{{ypData.name}}</text>
+    </view>
+    <view class="yp1">
+      <view class="yp2">
+        <view class="ypRow">
+          <text class="headTxt">地址：</text>
+          <text class="ypTxt">{{ypData.address}}</text>
+        </view>
+        <view class="ypRow">
+          <text class="headTxt">电话：</text>
+          <text class="ypTxt">{{ypData.tel}}</text>
+        </view>
+      </view>
+      <view class="telView"  bindtap="call" >
+        <image class="telImage"src="{{imgPath}}tel1.png"></image>
+        <text hidden="{{ypData.telCount==0}}">{{ypData.telCount}}</text>
+      </view>
+    </view>
+    <view class="ypRemark">
+      <text class="headTxt">详情：</text>
+      <text class="remarkTxt">{{ypData.remark}}</text>
+    </view>
+  </view>
+  <view class="commTitle">
+    <view class="zhanView">
+      <text class="title">用户评价</text>
+      <text wx:if="{{ypData.yellowPageComms.length>0}}">({{ypData.yellowPageComms.length}})</text>
+    </view>
+    <view class="zhanView">
+      <view class="ZView">
+        <image class="telImage" bindtap="Zclick" src="{{imgPath}}zhan.png"></image>
+        <text class="countTxt">{{ypData.ZCount}}</text>
+      </view>
+      <view class="ZView">
+        <image class="telImage" bindtap="Xclick" src="{{imgPath}}xia.png"></image>
+        <text class="countTxt">{{ypData.XCount}}</text>
+      </view>
+      <view class="ZView">
+        <button bindtap="commBtn"  type="primary" size="mini" plain="true" hover-class="other-button-hover">写评价</button>
+      </view>
+    </view>
+  </view>
+  <view class="commList">
+    <view wx:if="{{ypData.yellowPageComms.length==0}}" class="noComm">暂时还没有用户评价... ...</view>
+    <view wx:if="{{ypData.yellowPageComms.length>0}}">
+      <view wx:for="{{ypData.yellowPageComms}}" wx:for-item="item" wx:key="unique" wx:for-index="idx" class="commRow">
+        <view class="userInfo">
+          <view class="userV">
+            <image class="headImage" src="{{item.wappImage}}"  bindtap="pre" data-imgs="{{[item.wappImage]}}" ></image>
+            <text>{{item.wappNiname}}</text>
+          </view>
+          <text>{{item.dateStr}}</text>
+        </view>
+        <view class="commInfo">
+          <text>{{item.remark}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<modal hidden="{{needComm}}" title="用户评价" confirm-text="发布" cancel-text="取消" bindcancel="cancelCommClick" bindconfirm="commSubmit">
+  <view class="bottomModalView">
+    <textarea class="textareaB" value="{{commStr}}" maxlength="-1" bindinput="commInput"  />
+  </view>
+</modal>

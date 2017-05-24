@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="headView">
+    <view style="">
+      <text class="userinfo-nickname">请选择您要增加的货币！</text>
+    </view>
+  </view>
+  <view class="weui-grids">
+    <block wx:for="{{curNameList}}" wx:for-item="items" wx:for-index="index" wx:key="*this">
+      <view class="weui-grid" hover-class="weui-grid_active"  data-i="{{index}}" bindtap="bindlogoTap">
+        <view class="itemImage">
+          <image src="{{iconUrl}}id128/{{items.name}}.png" class="cur_logo" />
+          <text>{{items.cn}}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

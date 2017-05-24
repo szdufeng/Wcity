@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="forumType">
+            <view class="forumType1">说说版块</view>
+            <view class="weui-grids">
+              <block wx:for="{{ForumTypes}}" wx:for-item="items" wx:for-index="index" wx:key="*this">
+                <view class="weui-grid" hover-class="weui-grid_active" data-index="{{index}}" bindtap="bindtap">
+                  <view class="typeItem">
+                    <image class="weui-grid__icon" src="{{imgPath}}{{items.tid}}.png"></image>
+                    <view class="weui-grid__label">
+                      <text>{{items.name}}</text>
+                    </view>
+                  </view>
+                </view>
+              </block>
+            </view>
+          </view>
+          <view class="forumType1"></view>
+        </view>
+    <view class="mainview">
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view wx:for="{{data}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+            <view data-i="{{index}}" class="listItem" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+              <template is="msgItem" data="{{item}}" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view wx:for="{{data}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+            <view data-i="{{index}}" class="listItem" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+              <template is="msgItem" data="{{item}}" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+          <view wx:for="{{data}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+            <view data-i="{{index}}" class="listItem" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+              <template is="msgItem" data="{{item}}" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<template name="msgItem">
+  <view class="listTitle">{{item.title}}</view>
+  <view class="dateView">
+    <text>{{item.dateStr}}</text>
+    <text>{{item.wappNiname}}</text>
+    <view>浏览次数:
+      <text class="numColor">{{item.clickCount}}</text>
+    </view>
+  </view>
+</template>

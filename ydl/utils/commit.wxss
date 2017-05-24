@@ -1,0 +1,84 @@
+
+.commTitle {
+  font-size: 14pt;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid #d0d0d0;
+  border-bottom: 1rpx solid #d0d0d0;
+  background-color: #efeff4;
+  color: gray;
+}
+
+.zhanView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.telImage {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.ZView {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.countTxt
+{
+  font-size: 12pt;
+}
+.commList {
+  background-color: #efeff4;
+}
+
+.noComm {
+  padding: 10rpx;
+  
+  color: grey;
+  background-color: white;
+}
+
+.commRow {
+  color: gray;
+  margin-bottom: 24rpx;
+  background-color: white;
+  
+}
+
+.userInfo {
+  padding: 20rpx;
+  color: #8fc9c6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.userV {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.commInfo {
+  padding: 10rpx;
+  padding-left: 20rpx;
+}
+
+.headImage {
+  margin-right: 16rpx;
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 50%;
+}

@@ -1,0 +1,102 @@
+@import '../../utils/commit.wxss';
+
+swiper {
+  margin: 1rpx;
+  height: 400rpx;
+}
+
+swiper-item image {
+  width: 746rpx;
+  height: 100%;
+}
+
+
+.ypTitle {
+  font-size: 14pt;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #d0d0d0;
+  background-color: #efeff4;
+}
+
+.yp1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yp2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ypRow {
+  flex: 1;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+
+.ypTxt {
+  flex: 1;
+}
+
+.ypRemark {
+  
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-top: 1rpx solid #d0d0d0;
+}
+
+.telTxt {
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.telView {
+  width: 100rpx;
+  padding: 10rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.telImage {
+  width: 48rpx;
+  height: 48rpx;
+  padding-right: 10rpx;
+}
+
+.headTxt {
+  white-space: nowrap;
+}
+
+.remarkTxt {
+  flex: 1;
+}
+
+.textareaB {
+  width: 100%;
+  border: 1rpx solid #d0d0d0;
+}
+

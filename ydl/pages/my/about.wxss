@@ -1,0 +1,35 @@
+@import "/pages/common/link.wxss";
+.mainClass {
+  padding: 20rpx;
+  padding-left: 30rpx;
+  font-size: 13pt;
+}
+
+.titleView {
+  color: red;
+}
+
+.aClass {
+  
+}
+
+.aClass {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.txtView
+{
+    margin-bottom: 10rpx;
+    color: gray;
+}
+.txtView1
+{
+    margin-bottom: 24rpx;
+    color: gray;
+}
+.spaceView {
+  height: 20rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}

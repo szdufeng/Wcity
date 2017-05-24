@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="mainview">
+    <textarea maxlength="-1" auto-height="true" style="font-size:14pt;" class="inputText" placeholder="#写个标题#"  bindinput="titleInput"></textarea>
+
+    <view class="addPic">
+      <view class="weui-uploader">
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files" id="uploaderFiles">
+            <block wx:for-items="{{imagefiles}}" wx:key="{{index}}">
+              <view class="weui-uploader__file" id="{{item}}" style="position: relative;margin-right: 10px;">
+                <image data-url="{{item.localFile}}" data-index="{{index}}" class="weui-uploader__img" bindtap="previewImage" src="{{item.localFile}}" mode="aspectFill" />
+                <view data-index="{{index}}" class="weui-badge" bindtap="delPic" style="position: absolute;bottom: +0.1em;right: +0.1em;">-</view>
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__input-box">
+            <text class="upText">添些图片</text>
+            <view class="weui-uploader__input" bindtap="chooseImage">
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <textarea maxlength="-1" auto-height="true" class="inputText" placeholder="说点什么... ..."  bindinput="remarkInput"></textarea>
+
+    <view class="publishBtn" bindtap="publishBtn">确定发布</view>
+  </view>
+</view>
+<modal hidden="{{chexkNext}}" title="{{infoTxt}}" confirm-text="确定" bindconfirm="infoconfirm" no-cancel>
+</modal>

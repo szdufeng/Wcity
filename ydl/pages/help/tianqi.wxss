@@ -1,0 +1,129 @@
+.headDateView {
+  display: flex;
+  flex-direction: column;
+  align-items:  flex-end;
+  justify-content: flex-start;
+  font-size: 8pt;
+}
+
+.cityView {
+  height: 240rpx;
+  color: gray;
+  border-top: 1rpx solid #d0d0d0;
+}
+
+.cityViewRow {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-top: 15rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daysTitle {
+  
+  padding: 20rpx;
+  background-color: #fcfcfc;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.mainView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.mainLeftView {
+  padding: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1rpx solid #d0d0d0;
+}
+
+.mainLeftImgView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mainLeftTxtView {
+  font-size: 21pt;
+}
+
+.mainRightView {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+ 
+
+.wMainImage {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.hourView {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hourDate {
+  padding-right: 50rpx;
+}
+
+.hourInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wHourImage {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.daysView {
+  padding-left: 20rpx;
+}
+
+.dayView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.dayDate {
+  width: 180rpx;
+  padding-right: 30rpx;
+}
+
+.dayInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dayItem {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}

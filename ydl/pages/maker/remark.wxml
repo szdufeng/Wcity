@@ -1,0 +1,96 @@
+<view class="container">
+  <swiper wx:if="{{makerPics.length>0}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper">
+    <block wx:for="{{makerPics}}" wx:for-item="item" wx:key="unique" wx:for-index="subidx1">
+      <swiper-item>
+        <image src="{{item}}" bindtap="pre" data-imgs="{{makerPics}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="headerView">
+    <view class="tView1">
+      <text class="titleView">{{data.title}}</text>
+      
+
+    
+    </view>
+    <view class="tView1">
+      <view class="tView2">
+        <image class="VImg" src="{{makerIcon}}V{{data.makerType}}.png" />
+        <text>个人</text>
+      </view>
+      <text>翻译服务</text>
+    </view>
+    <view class="tView1">
+      <view class="starView">
+        <text style="color:#8fc9c6">★★★</text>
+        <text>★★</text>
+      </view>
+      <view class="tView2">
+        <text>浏览次数:</text>
+        <text>{{data.clickCount}}</text>
+      </view><view>
+        <button wx:if="canIUse" open-type="share" type="primary" size="mini" plain="true">发给好友</button>  </view>
+    </view>
+  </view>
+
+
+
+
+
+  <view class="weui-tab">
+    <view class="weui-navbar" style="background-color: #f6f6f6;">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);">
+      </view>
+    </view>
+    <view class="weui-tab__panel">
+
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+
+      </view>
+      <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<modal hidden="{{needComm}}" title="用户评价" confirm-text="发布" cancel-text="取消" bindcancel="cancelCommClick" bindconfirm="commSubmit">
+  <view class="bottomModalView">
+    <textarea class="textareaB" value="{{commStr}}" maxlength="-1" bindinput="commInput" />
+  </view>
+</modal>

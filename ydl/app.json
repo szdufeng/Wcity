@@ -1,0 +1,77 @@
+{
+    "pages": [
+        "pages/info/index",
+        "pages/info/list",
+        "pages/info/remark",
+        "pages/info/tel",
+        "pages/pub/index",
+        "pages/pub/publish",
+        "pages/pub/selectSub",
+        "pages/help/subway",
+        "pages/help/tran",
+        "pages/help/tianqi",
+        "pages/yellow/list",
+        "pages/yellow/search",
+        "pages/yellow/remark",
+        "pages/my/index",
+        "pages/my/mypub",
+        "pages/my/pubj",
+        "pages/my/please",
+        "pages/my/about",
+        "pages/currency/Trend",
+        "pages/currency/addCur",
+        "pages/currency/index",
+        "pages/ad/ad",
+        "pages/forum/index",
+        "pages/forum/list",
+        "pages/forum/publish",
+        "pages/forum/remark",
+        "pages/maker/list",
+        "pages/maker/publish",
+        "pages/maker/remark"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTitleText": "微同城",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "white"
+    },
+    "tabBar": {
+        "Color": "#687674",
+        "selectedColor": "#8fc9c6",
+        "backgroundColor": "#fcfcfc",
+        "list": [
+            {
+                "pagePath": "pages/info/index",
+                "text": "首页",
+                "iconPath": "images/tabBar/home_n.png",
+                "selectedIconPath": "images/tabBar/home.png"
+            },
+            {
+                "pagePath": "pages/forum/index",
+                "text": "说说",
+                "iconPath": "images/tabBar/forum_n.png",
+                "selectedIconPath": "images/tabBar/forum.png"
+            },
+            {
+                "pagePath": "pages/pub/index",
+                "text": "发布",
+                "iconPath": "images/tabBar/add_n.png",
+                "selectedIconPath": "images/tabBar/add.png"
+            },
+            {
+                "pagePath": "pages/maker/list",
+                "text": "商家",
+                "iconPath": "images/tabBar/maker_n.png",
+                "selectedIconPath": "images/tabBar/maker.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "发现",
+                "iconPath": "images/tabBar/classific_n.png",
+                "selectedIconPath": "images/tabBar/classific.png"
+            }
+        ]
+    }
+}

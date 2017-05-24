@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="headView">
+    <text>请选择您的发布小类别</text>
+    <text> </text>
+  </view>
+
+
+  <view wx:if="{{subProjects1.length==0}}" wx:for="{{subProjects}}" wx:for-item="item1" wx:key="unique" wx:for-index="idx" class="toolView">
+    <view class="btnClass" data-i="{{item1.i}}" bindtap="subPClick" hover-class="other-button-hover" data-subType="{{item1.i}}" data-subName="{{item1.name}}"> {{item1.name}}</view>
+  </view>
+
+
+  <view wx:if="{{subProjects1.length>0}}" wx:for="{{subProjects1}}" wx:for-item="item1" wx:key="unique" wx:for-index="idx1" class="typeRowMain">
+    <view class="typeRow">
+      <view wx:for="{{[0,1]}}" wx:key="*this" wx:for-item="i" data-row="{{idx1}}" wx:for-index="idx2" class="typeRowItem">
+        <view class="btnClass1" data-i="{{item1[i].i}}" bindtap="subPClick" hover-class="other-button-hover" data-subType="{{item1[i].i}}" data-subName="{{item1[i].name}}"> {{item1[i].name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

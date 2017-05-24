@@ -1,0 +1,39 @@
+.mainView {
+  margin: 10rpx;
+}
+
+.listRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #d0d0d0;
+  padding: 20rpx;
+}
+
+.dataView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.remarkView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  color: gray;
+}
+
+.delImage {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.titleView {
+  margin-bottom: 10rpx;
+}
+.countText
+{
+  margin-left: 60rpx;
+}

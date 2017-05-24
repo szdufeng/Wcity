@@ -1,0 +1,120 @@
+ 
+
+.addView {
+  position: fixed;
+  width: 120rpx;
+  height: 120rpx;
+  z-index: 500;
+  bottom: 40rpx;
+  right: 40rpx;
+  background-color: #8fc9c6;
+  background: rgba(143, 201, 198, 0.8);
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addImage {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.mainView {
+  font-size: 11pt;
+}
+
+.listView {
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.makerImg {
+  width: 216rpx;
+  height: 148rpx;
+  margin: 10rpx;
+}
+
+.VImg {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.titleView {
+  padding: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #f8f8f8;
+  background-color: #fdfdfd;
+}
+
+.mView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx;
+}
+
+.iView {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-right: 1rpx solid #d0d0d0;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.iiView {
+  width: 380rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.iiView1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.iiView2 {
+  font-size: 10pt;
+  color: gray;
+}
+
+.AddressView {
+  color: gray;
+}
+ .starView
+ {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 14pt;
+  color: #c8c8c8;
+ }
+.telView {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.b22 {
+  padding-right: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #fff;
+  border-bottom: 1rpx solid #d0d0d0;
+}

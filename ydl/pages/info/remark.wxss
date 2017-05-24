@@ -1,0 +1,116 @@
+@import '../../utils/commit.wxss';
+
+swiper-item image {
+  width: 100%;
+}
+
+.infoView {
+  margin: 10rpx;
+}
+
+.leftText {
+  white-space: nowrap;
+}
+.leftText1
+{
+  white-space: nowrap;
+font-size: 9pt;
+}
+.weixinText {
+  margin-right: 10rpx;
+  white-space: nowrap;
+}
+
+.infoDate {
+  padding: 20rpx;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efeff4;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.infoHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.infoHead1
+{
+    margin-left: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:  flex-start;
+}
+
+.headImage {
+  margin-right: 10rpx;
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 20%;
+}
+
+.infoTitle {
+  padding: 20rpx;
+  font-size: 14pt;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.infoAddress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoAddressItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.infoAddressLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.telView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.telImage {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.infoLx {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.infoRemark {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.textareaB {
+  width: 100%;
+  border: 1rpx solid #d0d0d0;
+}

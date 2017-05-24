@@ -1,0 +1,103 @@
+.addView {
+  position: fixed;
+  width: 110rpx;
+  height: 110rpx;
+  z-index: 500;
+  bottom: 30rpx;
+  right: 30rpx;
+  background: rgba(143, 201, 198, 0.8);
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weui-tab__content {
+  padding-top: 20px;
+  text-align: center;
+}
+
+ 
+.spaceView {
+  height: 30rpx;
+  background-color: #f0f0f0;
+}
+.mainview
+{
+    padding: 20rpx;
+}
+.headInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.typeV {
+  padding-bottom: 20rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.typeImage {
+  margin-left: 20rpx;
+  width: 128rpx;
+  height: 128rpx;
+}
+
+.typeName {
+  font-size: 14pt;
+}
+
+.typeRemark {
+  font-size: 10pt;
+  color: gray;
+  width: 500rpx;
+}
+
+.addImage {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.listView {
+  margin: 10rpx;
+}
+
+.listItem {
+  padding: 10rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.listTitle {
+  margin-bottom: 10rpx;
+  text-align: left;
+}
+
+.dateView {
+    margin-top: 10rpx;
+  font-size: 10pt;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}
+
+.noDataView {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80rpx;
+  font-size: 16pt;
+  align-items: center;
+  color: gray;
+}
+
+.nodataimg {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+}

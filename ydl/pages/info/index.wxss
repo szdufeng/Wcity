@@ -1,0 +1,117 @@
+/**index.wxss**/
+
+.tianqiBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid #d0d0d0;
+  border-bottom: 1rpx solid #d0d0d0;
+  padding: 3rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.tianqiSwiper {
+  flex: 1;
+  display: flex;
+  height: 60rpx;
+}
+
+.tianqi {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wImg {
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wwImg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wImage {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.lifeText {
+  font-weight: 600;
+  font-size: 18pt;
+  color: #8fc9c6;
+  margin-top: 10rpx;
+}
+
+.tianqiTxt {
+  color: #8fc9c6;
+}
+
+.typeView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.typeViewRowMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.typeViewRow {
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}
+
+.typeViewRowItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.typeItemImage {
+  width: 108rpx;
+  height: 108rpx;
+}
+
+.subProjectView {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 1rpx solid #d0d0d0;
+  border-radius: 2%;
+}
+
+.subTypeViewRowMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

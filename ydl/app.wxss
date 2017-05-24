@@ -1,0 +1,115 @@
+@import 'utils/weui.wxss';
+
+.container {
+  display: block;
+  flex-direction: column;
+  align-items: left;
+  box-sizing: border-box;
+  font-size: 12pt;
+    font-weight: 100;
+  font-family: "微软雅黑";
+}
+
+.headView {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+  font-size: 14pt;
+  background-color: #8fc9c6;
+  color: white;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.telImage {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.b1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.b2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border-bottom: 1rpx solid #d0d0d0;
+  background-color: #fff;
+}
+
+.b3 {
+  margin: 10rpx;
+  padding: 14rpx;
+}
+
+.b33 {
+  margin: 10rpx;
+  padding: 14rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.selectOne {
+  
+  width: 100%;
+}
+
+.selectBar {
+  font-size: 14pt;
+  padding: 16rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #d0d0d0;
+  border-bottom: 1rpx solid #d0d0d0;
+  color: #8fc9c6;
+}
+
+.selectItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.xiaImage {
+ margin-left: 10rpx;
+  width: 16rpx;
+  height: 16rpx;
+}
+
+.numColor {
+  color: #8fc9c6;
+}
+
+.adTitleTxt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  color: red;
+  margin-bottom: 20rpx;
+}
+swiper {
+  margin: 1rpx;
+  height: 400rpx;
+}
+
+swiper-item image {
+  width: 746rpx;
+  height: 100%;
+}

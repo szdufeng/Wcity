@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="headView">
+    <text>请按照以下要求发布信息</text>
+    <text> </text>
+  </view>
+  <view class="mainClass">
+    <view class="txtView">
+      <text class="txtClass">1. 标题尽量在15字以内，简介的标题更受欢迎~</text>
+      <text class="txtClass">2. 尽可能的描述物品的详细情况，为何转让，交易发那个是及时间等</text>
+      <text class="txtClass">3. 图片展示技巧</text>
+    </view>
+    <view class="picView">
+      <text class="txtClass1">请尽量把物品物在中间</text>
+      <view class="picImageView">
+        <image class="pubjimage" mode="widthFix" src="{{imgUrls[0]}}" />
+        <image class="pubjimage" mode="widthFix" src="{{imgUrls[1]}}" />
+      </view>
+      <text class="txtClass1">多角度细节更棒呦</text>
+      <view class="picImageView">
+        <image class="pubjimage" mode="widthFix" src="{{imgUrls[2]}}" />
+        <image class="pubjimage" mode="widthFix" src="{{imgUrls[3]}}" />
+      </view>
+      <text class="txtClass1">真人实拍更有吸引力</text>
+      <view class="picImageView">
+        <image class="pubjimage" mode="widthFix" src="{{imgUrls[4]}}" />
+      </view>
+    </view>
+    <include src="/pages/common/link.wxml" />
+  </view>
+</view>

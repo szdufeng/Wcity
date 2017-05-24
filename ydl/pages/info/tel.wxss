@@ -1,0 +1,66 @@
+page{
+    background-color: #FFFFFF;
+}
+.titleTxt
+{
+  font-size: 14pt;
+  color: red;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+.telview
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items:  center;  
+}
+image{
+    margin: 4px 0;
+}
+
+.spaceView {
+  height: 20rpx;
+  background-color: #fcfcfc;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+.telListRow
+{
+  padding: 6rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:   space-between;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+.telListRowLeft
+{
+  padding: 8rpx;
+  display: flex;
+  flex-direction:  column; 
+  justify-content:  flex-start;
+
+}
+.typeItemTxt
+{
+  white-space: nowrap; 
+}
+.telListRowRight
+{
+  padding: 10rpx;
+}
+.telName
+{
+  
+}
+.telCode
+{
+  color: gray;
+}
+.telImage
+{
+  width: 42rpx;
+  height: 42rpx;
+}

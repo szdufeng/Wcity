@@ -1,0 +1,61 @@
+<view class="container">
+  <view class="mainview">
+    <view class="headInfo">
+      <image class="typeImage" src="{{imgPath}}{{tid}}.png" />
+      <view class="typeV">
+        <text class="typeName">{{name}}</text>
+        <text class="typeRemark">{{remark}}</text>
+      </view>
+    </view>
+
+    <view class="spaceView">
+    </view>
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <template name="msgItem">
+        <view class="listTitle">{{item.title}}</view>
+        <view class="dateView">
+          <text>{{item.dateStr}}</text>
+          <text>{{item.wappNiname}}</text>
+          <view>浏览次数:
+            <text class="numColor">{{item.clickCount}}</text>
+          </view>
+        </view>
+      </template>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view wx:for="{{data}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+            <view data-i="{{index}}" class="listItem" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+              <template is="msgItem" data="{{item}}" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view wx:for="{{data}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+            <view data-i="{{index}}" class="listItem" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+              <template is="msgItem" data="{{item}}" />
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view wx:for="{{data}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+            <view data-i="{{index}}" class="listItem" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+              <template is="msgItem" data="{{item}}" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="addView">
+  <image class="addImage" bindtap="publishBtn" src="{{imgPath}}add.png" />
+</view>

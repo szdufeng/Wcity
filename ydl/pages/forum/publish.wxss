@@ -1,0 +1,48 @@
+.mainview {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+ 
+
+.inputText { 
+  margin: 20rpx; 
+  margin-top: 40rpx;
+  margin-bottom: 40rpx; 
+} 
+ 
+ 
+
+.addPic {
+  padding: 20rpx; 
+  border-top: 1rpx solid #f0f0f0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+ 
+.publishBtn {
+  position: fixed;  
+  z-index: 500;
+  bottom: 20rpx;
+  right: 20rpx;
+  padding: 20rpx;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+  border-radius: 3%;
+  text-align: center;
+  
+  background: rgba(143, 201, 198, 0.9);
+  overflow: hidden;
+  font-size: 14pt;
+  color: white;
+}
+
+.bottomModalView {
+  border: 1rpx solid #d0d0d0;
+}
+
+.upText {
+  position: relative;
+  font-size: 10pt;
+  top: 38px;
+  color: gray;
+}

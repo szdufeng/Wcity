@@ -1,0 +1,96 @@
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+.mainview
+{
+    padding: 20rpx;
+}
+.weui-tab__content {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.forumType {
+  display: flex;
+  flex-direction: column;
+}
+
+.forumType1 {
+  font-size: 12pt;
+  padding: 16rpx;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.weui-grids {
+  border-top: 1rpx solid #d9d9d9;
+  border-left: 1rpx solid #d9d9d9;
+  overflow: hidden;
+}
+
+.weui-grid {
+  position: relative;
+  width: 50%;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-right: 1rpx solid #d9d9d9;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.weui-grid1_active {
+  background-color: #ececec;
+}
+.typeItem
+{ 
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.weui-grid__icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-right: 20rpx;
+}
+
+.weui-grid__label {
+  display:block;
+  text-align:  left;
+  color: #000;
+  font-size: 10pt;
+}
+
+.listView {
+  margin: 10rpx;
+}
+
+.listItem {
+  padding: 10rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.listTitle {
+  margin-bottom: 10rpx;
+  text-align: left;
+}
+
+.dateView {
+    margin-top: 10rpx;
+  font-size: 10pt;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+}

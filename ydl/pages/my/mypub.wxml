@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="headView">
+    <text wx:if="{{data.length>0}}">您共发布了{{data.length}}条信息</text>
+    <text wx:if="{{data.length==0}}">您还没有发布过信息</text>
+    <text> </text>
+  </view>
+  <view class="mainView">
+    <view wx:for="{{data}}" wx:for-item="item" wx:key="unique" wx:for-index="idx" class="listRow" >
+      <view class="dataView"  bindtap="remarkBtn" data-tid="{{item.dataId}}" data-typeid="{{item.mainType}}">
+        <text class="titleView">{{item.title}}</text>
+        <view class="remarkView">
+          <text>{{item.date}}</text>
+          <view class="countText">
+            <text>{{item.clickCount}}</text>
+            <text>阅读量</text>
+          </view>
+        </view>
+      </view>
+      <image class="delImage" src="{{imgPath}}del.png" background-size="cover" data-tid="{{item.dataId}}"  data-txt="{{item.title}}"   bindtap="delBtn"></image>
+    </view>
+  </view>
+</view>

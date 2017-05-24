@@ -1,0 +1,46 @@
+
+<!--index.wxml-->
+<view class="container">
+  <view class="headView" >
+    <text>请点击加号增加需要兑换的货币</text>
+    <image class="addImage"   bindtap="bindAddCur" src="{{imgPath}}add.png"  />
+  </view>
+  <view class="cur_main">
+    <image src="{{iconUrl}}id128/{{myMainCur.name}}.png" class="cur_logo" />
+    <view class="middle">
+      <view class="top">
+        <text>{{myMainCur.name}} {{myMainCur.cn}}</text>
+        <view class="datetimeTxt">
+          <text>{{curDate}}</text>
+        </view>
+      </view>
+      <view class="amountInput">
+        <input bindinput="bindKeyInput" placeholder="{{myMainCur.amount}}"  maxlength="180" type="digit"  />
+      </view>
+    </view>
+  </view>
+  <scroll-view class="items" scroll-y="true" wx:if="{{hadSelectcurs}}">
+    <block wx:for="{{mySelectCurs}}" wx:key="">
+      <view class="item" bindlongtap="longtapFormSet" data-text="{{item.cn}}" data-id="{{item.name}}">
+        <image src="{{iconUrl}}id128/{{item.name}}.png" class="cur_logo" />
+        <view class="middle">
+          <text>{{item.name}} {{item.cn}}</text>
+          <view class="rateTxt">
+            <text>{{item.amount}}</text>
+          </view>
+          <text>1 {{myMainCur.name}}＝{{item.rate}} {{item.name}}</text>
+        </view>
+        <view class="right" bindtap="bindKeyTrend" data-amount="{{myMainCur.amount}}" data-from="{{myMainCur.name}}" data-to="{{item.name}}" data-fromName="{{myMainCur.cn}}" data-toName="{{item.cn}}">
+          <image src="{{imgPath}}shi2.png" class="cur_logo" />
+          <text style=" Color:#8fc9c6">汇率走势</text>
+        </view>
+      </view>
+    </block>
+    <view class="editView">
+      <text style="  text-align: right;">长按编辑</text>
+    </view>
+  </scroll-view>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <text style=" padding-right: 20rpx;">货币汇率数据来源于和讯，仅作参考，每小时更新一次</text>
+  </view>
+</view>

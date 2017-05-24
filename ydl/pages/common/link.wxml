@@ -1,0 +1,20 @@
+<view class="spaceView">
+</view>
+<view class="adWeixinView"  bindtap="copyClick" data-weixin="msk917">
+  <text>如需合作，请联系微信：msk917</text>
+  <image class="adTelImage" src="{{imgPath}}{{copyImage}}.png"></image>
+</view>
+<view class="adTelView">
+  <view class="adTel" bindtap="telClick" data-tel="13960809265">
+    <text>国内电话</text>
+    <image class="adTelImage" src="{{imgPath}}tel2.png"></image>
+    <image class="adRightImage" src="{{imgPath}}right1.png"></image>
+  </view>
+</view>
+<view class="adTelView">
+  <view class="adTel" bindtap="telClick" data-tel="3342320588">
+    <text>{{conturyName}}电话</text>
+    <image class="adTelImage" src="{{imgPath}}tel2.png"></image>
+    <image class="adRightImage" src="{{imgPath}}right1.png"></image>
+  </view>
+</view>

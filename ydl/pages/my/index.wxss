@@ -1,0 +1,58 @@
+.headInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #d0d0d0;
+  padding: 20rpx;
+  background-color: #8fc9c6;
+  color: white;
+}
+
+.myImage {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+.contactImg {
+  width: 60rpx;
+  height: 60rpx; 
+}
+.spaceView {
+  height: 20rpx;
+  background-color: #fcfcfc;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.funListItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+ 
+.leftImage {
+  margin-right: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.funImage {
+  margin: 10rpx;
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.funInfoImage {
+  width: 48rpx;
+  height: 48rpx;
+}

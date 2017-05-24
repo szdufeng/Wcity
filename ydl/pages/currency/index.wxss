@@ -1,0 +1,86 @@
+/**index.wxss**/
+
+.datetimeTxt {
+  margin-top: -5rpx;
+  margin-right: 20rpx;
+}
+
+.addImage {
+  width: 64rpx;
+  height: 64rpx;
+  padding-right: 10rpx;
+}
+
+.cur_main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 24rpx;
+  align-items: center;
+  background-color: #fcfffc;
+  border-top: 1rpx solid #d0d0d0;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.cur_logo {
+  width: 108rpx;
+  height: 78rpx;
+}
+
+.amountInput {
+  background-color: white;
+  padding-left: 10rpx;
+  margin-top: 6rpx;
+  border: 1rpx solid #888;
+  font-size: 14pt;
+}
+
+.rateTxt {
+  margin-top: 1rpx;
+  font-size: 16pt;
+}
+
+.items {
+ height: 800rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx;
+  padding-top: 12rpx;
+  padding-bottom: 12rpx;
+  
+  background-color: #fff;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+.middle {
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.right {
+  font-size: 9pt; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.editView {
+  padding-top: 10rpx;
+  text-align: right;
+  width: 96%;
+  height: 20px;
+}
+
+

@@ -1,0 +1,96 @@
+.mainView {
+  padding: 10rpx;
+}
+
+.itemView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.itemL {
+  text-align: right;
+  width: 140rpx;
+  padding-right: 20rpx;
+  font-size: 10pt;
+  color: gray;
+}
+
+.itemC {
+  border-left: 1rpx solid #d0d0d0;
+  padding: 20rpx;
+  flex: 1;
+}
+
+.itemCForPicc {
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-left: 1rpx solid #d0d0d0;
+}
+
+.itemCForTxt {
+  font-size: 10pt;
+  color: gray;
+  margin-top: 10rpx;
+}
+
+.itemR {
+  padding: 20rpx;
+}
+
+.textareaB {
+  width: 100%;
+}
+
+.rightJia {
+  color: gray;
+}
+
+.button-hover {
+  background-color: green;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10pt;
+  color: gray;
+}
+
+.publishBtnView {
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10rpx;
+}
+
+.publishBtn {
+  padding: 10rpx;
+  border-radius: 3%;
+  text-align: center;
+  width: 80%;
+  background-color: green;
+  font-size: 14pt;
+  color: white;
+}
+
+.bottomModalView {
+  border: 1rpx solid #d0d0d0;
+}
+
+.upText {
+  position: relative;
+  font-size: 10pt;
+  top: 38px;
+  color: gray;
+}

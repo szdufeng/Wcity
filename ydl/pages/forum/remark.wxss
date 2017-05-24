@@ -1,0 +1,139 @@
+.mainview {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.shareView
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-between;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.infoTitle {
+  padding: 20rpx;
+  font-size: 16pt;
+  border-bottom: 1rpx solid #d0d0d0;
+}
+
+.infoDate {
+  padding: 20rpx;
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.infoHead {
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.headImage {
+  margin-right: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.ZImage {
+  width: 72rpx;
+  height: 72rpx;
+}
+
+.infoRemark {
+  margin: 20rpx;
+}
+
+.spaceView {
+  height: 30rpx;
+  background-color: #f0f0f0;
+}
+
+.commTitle {
+  padding: 20rpx;
+  font-size: 14pt;
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-between;
+  align-items:  center;
+}
+
+.commRow {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-top: 1rpx solid #d0d0d0;
+}
+
+.commInfo {
+  padding: 10rpx;
+  padding-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.commUser {
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.commRemark {
+  font-size: 10pt;
+  margin-top: 10rpx;
+  width: 580rpx;
+}
+
+.noComm {
+  padding: 10rpx;
+  color: grey;
+  background-color: white;
+}
+
+.phcommView {
+  width: 710rpx;
+  position: fixed;
+  padding: 20rpx;
+  z-index: 500;
+  bottom: 0rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  justify-content: space-around;
+  border-top: 1rpx solid #d0d0d0;
+}
+
+.phcommTxt {
+  flex: 1;
+  padding: 10rpx;
+  border: 1rpx solid #d0d0d0;
+  margin-right: 30rpx;
+  border-radius: 5%;
+}
+
+.phcommBtn {
+  padding: 8rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  border: 1rpx solid #d0d0d0;
+  border-radius: 5%;
+}
+
+.textareaB {
+  width: 100%;
+  height: 400rpx;
+  border: 1rpx solid #d0d0d0;
+}

@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" class="swiper">
+    <block wx:for="{{mainHeads}}" wx:for-item="item" wx:key="unique" wx:for-index="subidx1">
+      <swiper-item>
+        <image bindtap="adclick" data-i="{{item.dataId}}" src="{{item.mainPic}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="tianqiBar">
+    <swiper class="tianqiSwiper"   vertical="true" indcator-dots="false" autoplay="true" interval="4000">
+      <block wx:for="{{tianqiDatas}}" wx:for-item="item" wx:key="unique" wx:for-index="index" wx:if="{{tianqiDatas.length>0}}">
+        <swiper-item bindtap="tianqiBtn" data-index="{{index}}" class="tianqi">
+          <text>{{item.basic.city}}：</text>
+          <view class="wInfo">
+            <text class="tianqiTxt">{{item.daily_forecast[0].tmp.min}}</text>
+            <text>~</text>
+            <text class="tianqiTxt">{{item.daily_forecast[0].tmp.max}}</text>
+            <text class="tianqiTxt">℃</text>
+            <view class="wImg">
+              <image class="wImage" src="{{weatherImgPath}}{{item.daily_forecast[0].cond.code_d}}.png" background-size="cover"></image>
+              <view class="wwImg" wx:if="{{tianqiDatas[index].daily_forecast[0].cond.code_d!=item.daily_forecast[0].cond.code_n}}">
+                <text>-></text>
+                <image class="wImage" src="{{weatherImgPath}}{{item.daily_forecast[0].cond.code_n}}.png" background-size="cover"></image>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="curr" bindtap="currBtn">
+      <view>{{toCurrencyName}}/{{currencyName}}:
+        <text class="tianqiTxt">{{CurRate}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:for="{{projects}}" wx:for-item="item1" wx:key="unique" wx:for-index="idx1" class="typeViewRow">
+    <view wx:for="{{item1}}" wx:for-item="item2" wx:key="unique" wx:for-index="idx2" class="typeViewRowItem" data-row="{{idx1}}" data-mainType="{{item2.i}}" data-mainName="{{item2.name}}" bindtap="pClick">
+      <image class="typeItemImage" src="{{imgPath}}{{item2.img}}" background-size="cover"></image>
+      <text class="typeItemTxt">{{item2.name}}</text>
+    </view>
+  </view>
+  <view class="typeView">
+    <text class="lifeText">生活百宝箱</text>
+  </view>
+  <view wx:for="{{services}}" wx:for-item="item1" wx:key="unique" wx:for-index="idx1" class="typeViewRow">
+    <view wx:for="{{item1}}" wx:for-item="item2" wx:key="unique" wx:for-index="idx2" class="typeViewRowItem" data-row="{{idx1}}" data-mainType="{{item2.i}}" data-mainName="{{item2.name}}" bindtap="pClick" wx:if="{{item2.isWork}}">
+      <image class="typeItemImage" src="{{imgPath}}{{item2.img}}" background-size="cover"></image>
+      <text class="typeItemTxt">{{item2.name}}</text>
+    </view>
+  </view>
+</view>

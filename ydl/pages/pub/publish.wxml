@@ -1,0 +1,126 @@
+<view class="container">
+  <view class="headView">
+    <text>发布{{mainName}}信息</text>
+    <text>{{subName}}</text>
+  </view>
+  <view class="mainView">
+    <view class="itemView" wx:if="{{subProjects.length>0 && fromList==1}}" >
+      <view class="itemL">
+        <text>类别</text>
+      </view>
+      <view class="itemC">
+        <picker bindchange="subPickerChange" value="{{subIndex}}" range="{{subProjectsStr}}">
+          <view class="picker">
+            <text>{{subProjects[subIndex].name}}</text>
+          </view>
+        </picker>
+      </view>
+      <view class="itemR">
+        <text class="rightJia">></text>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>标题</text>
+      </view>
+      <view class="itemC" bindtap="remarkTap" data-n="title">
+        <label style="{{remarkColor1}}">{{title}}</label>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>内容</text>
+      </view>
+      <view class="itemC" bindtap="remarkTap" data-n="remark">
+        <label style="{{remarkColor2}}">{{remark}}</label>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>图片</text>
+      </view>
+      <view  class="itemCForPicc">
+        <view class="weui-uploader">
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for-items="{{imagefiles}}" wx:key="{{index}}">
+                <view class="weui-uploader__file" id="{{item}}" style="position: relative;margin-right: 10px;">
+                  <image data-url="{{item.localFile}}" data-index="{{index}}" class="weui-uploader__img" bindtap="previewImage" src="{{item.localFile}}" mode="aspectFill" />
+                  <view data-index="{{index}}" class="weui-badge" bindtap="delPic" style="position: absolute;bottom: +0.1em;right: +0.1em;">-</view>
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box">
+              <text class="upText">添加图片</text>
+              <view class="weui-uploader__input" bindtap="chooseImage">
+              </view>
+            </view>
+          </view>
+        </view>
+        <text class="itemCForTxt">用于展示，请选择或拍摄横向图片</text>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>城市</text>
+      </view>
+      <view class="itemC">
+        <picker bindchange="bindPickerChange" value="{{cityIndex}}" range="{{citys}}">
+          <view class="picker">
+            <text>{{citys[cityIndex]}}</text>
+          </view>
+        </picker>
+      </view>
+      <view class="itemR">
+        <text class="rightJia">></text>
+      </view>
+    </view>
+    <view class="itemView" bindtap="openMap">
+      <view class="itemL">
+        <text>地址</text>
+      </view>
+      <view class="itemC">
+        <text>{{address.address}}</text>
+      </view>
+      <view class="itemR">
+        <text class="rightJia">></text>
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>联系人</text>
+      </view>
+      <view class="itemC">
+        <input data-n="person" bindinput="hadInput" placeholder="请输入联系人" />
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>电话</text>
+      </view>
+      <view class="itemC">
+        <input data-n="tel" bindinput="hadInput" placeholder="请输入电话" type="number" />
+      </view>
+    </view>
+    <view class="itemView">
+      <view class="itemL">
+        <text>微信号</text>
+      </view>
+      <view class="itemC">
+        <input data-n="weixin" bindinput="hadInput" placeholder="请输入微信号(选填)" />
+      </view>
+    </view>
+  </view>
+  <view class="weui-footer">
+  <view class="publishBtnView">
+    <view class="publishBtn"   bindtap="publishBtn"   >确定发布</view>
+  </view>
+</view>
+  <modal hidden="{{needRemark}}" title="{{RemarkTitle}}" confirm-text="确定" bindconfirm="remarkconfirm" no-cancel>
+    <view class="bottomModalView">
+      <textarea class="textareaB" value="{{RemarkTxt}}" maxlength="-1" bindinput="remarkInput" bindconfirm="remarkconfirm" />
+    </view>
+  </modal>
+  <modal hidden="{{chexkNext}}" title="{{infoTxt}}" confirm-text="确定" bindconfirm="infoconfirm" no-cancel>
+  </modal>
+</view>

@@ -1,0 +1,68 @@
+<view class="container">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="searchConfirm" />
+        <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+          <icon type="clear" size="14"></icon>
+        </view>
+      </view>
+      <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+    <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+  </view>
+  <view class="selectBar">
+    <view class="selectItem" bindtap="typeBtn">
+      <text>{{selectTypeStr}}</text>
+      <image class="xiaImage" src="{{imgPath}}xiala2.png" />
+    </view>
+    <view wx:if="{{subTypes.length>1}}" class="selectItem" bindtap="subTypeBtn">
+      <text>{{selectSubTypeStr}}</text>
+      <image class="xiaImage" src="{{imgPath}}xiala2.png" />
+    </view>
+  </view>
+  <view class="b1" hidden="{{flag}}">
+    <view wx:for="{{typeData}}" wx:key="unique" wx:for-index="idx" wx:for-item="item" class="b2">
+      <view wx:for="{{item}}" wx:key="unique1" wx:for-index="idx1" wx:for-item="item1" class="b3">
+        <view bindtap="typeSelectHidden" data-row="{{idx}}" data-column="{{idx1}}" class="selectOne">{{item1.yellowPageType.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="b1" hidden="{{subFlag}}">
+    <view class="b22">
+      <view wx:for="{{subTypes}}" wx:key="unique" wx:for-index="idx" wx:for-item="item" class="b33">
+        <view bindtap="subTypeSelectHidden" data-row="{{idx}}" data-subTypeID="{{item.subTypeID}}" class="selectOne">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="searchResultView">
+    <view wx:for="{{ypData}}" wx:for-item="item" wx:key="unique" wx:for-index="idx" class="ItemViewRow">
+      <view class="ItemViewRowLeft" bindtap="ypClick" data-index="{{idx}}">
+        <view class="ItemViewRowImage">
+          <image mode="scaleToFill" class="listImage" src="{{item.logoImg}}"></image>
+        </view>
+        <view class="ItemViewRowName">
+          <text class="nameTxt">{{item.name}}</text>
+          <text class="addressTxt">{{item.address}}</text>
+          <view class="telTxt">
+            <text>{{item.tel}}</text>
+            <view style="padding-left: 16rpx;" hidden="{{item.clickCount==0}}">(浏览次数:
+              <text class="numColor">{{item.clickCount}}</text>
+              <text>)</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="ItemViewRowRight"  bindtap="call" data-index="{{idx}}">
+        <image class="telImage" src="{{imgPath}}tel1.png"></image>
+        
+          <text  hidden="{{item.telCount==0}}" class="numColor">{{item.telCount}}</text>
+         
+      </view>
+    </view>
+  </view>
+</view>

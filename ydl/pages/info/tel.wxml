@@ -1,0 +1,31 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="adTitleTxt">
+        <text>{{wappName}}温馨提示</text>
+      </view>
+      <view class="weui-article__p">
+        <text>{{conturyName}}拨国内座机：0086+区号（不要区号前的0）+电话号码，如拨打北京座机00861012345678</text>
+      </view>
+      <view class="weui-article__p">
+        {{conturyName}}拨国内手机：0086+手机号码 </view>
+      <view class="weui-article__p">
+        国内拨{{conturyName}}号码：{{telCode}}+电话号码
+      </view>
+      <view class="weui-article__p">
+        在{{conturyName}}拨打国外移动电话：00+国家代码+电话号码
+      </view>
+    </view>
+  </view>
+  <view class="spaceView">
+  </view>
+  <view wx:for="{{tels}}" wx:for-item="item" wx:key="unique" wx:for-index="idx" class="telListRow">
+    <view class="telListRowLeft">
+      <text class="telName">{{item.name}}</text>
+      <text class="telCode">{{item.tel}}</text>
+    </view>
+    <view class="telListRowLeft">
+      <image class="telImage" bindtap="call" data-tel="{{item.tel}}" src="{{imgPath}}tel1.png"></image>
+    </view>
+  </view>
+</view>

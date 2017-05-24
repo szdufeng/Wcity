@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="headView">
+    <view class="selectItem" bindtap="cityBtn" data-n="citys">
+      <text>{{selectCityStr}}</text>
+      <image class="xiaImage" src="{{imgPath}}xiala1.png" />
+    </view>
+    <view wx:if="{{subProjects.length>1}}" class="selectItem" bindtap="subBtn">
+      <text>{{selectTypeStr}}</text>
+      <image class="xiaImage" src="{{imgPath}}xiala1.png" />
+    </view>
+  </view>
+  <view class="b1" hidden="{{flag}}">
+    <view wx:for="{{citys}}" wx:key="unique" wx:for-index="idx" wx:for-item="item" class="b2">
+      <view wx:for="{{item}}" wx:key="unique1" wx:for-index="idx1" wx:for-item="item1" class="b3">
+        <view bindtap="selectHidden" data-row="{{idx}}" data-column="{{idx1}}" class="selectOne">{{item1}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="b1" hidden="{{subFlag}}">
+    <view class="b22">
+      <view wx:for="{{subProjects}}" wx:key="unique" wx:for-index="idx" wx:for-item="item" class="b33">
+        <view bindtap="selectHidden" data-row="{{idx}}" data-i="{{item.i}}" class="selectOne">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view hidden="{{data.length>0}}" class="noDataView">
+    <image class="nodataimg" src="{{imgPath}}nodata.png" />
+    <text>没有发现{{mainName}}信息！！</text>
+  </view>
+  <view class="addView">
+    <image class="addImage" bindtap="publishBtn" src="{{imgPath}}add.png" />
+  </view>
+  <view wx:for="{{data}}" wx:key="unique" wx:for-index="idx" wx:for-item="item">
+    <view data-i="{{index}}" class="listView">
+      <view  wx:if="{{item.pics[0].minpath.length>0}}"  class="listImageView" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+        <image mode="scaleToFill" class="listImage" src="{{rootUrl}}/Upload/{{item.pics[0].minpath}}"></image>
+      </view>
+      <view class="listRemarkView">
+        <view class="listTitle" bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">{{item.title}}</view>
+        <view class="listRight">
+          <view class="listData"  bindtap="remarkBtn" data-index="{{idx}}" data-dataid="{{item.dataId}}">
+            <text style="padding-right: 20rpx;">{{item.city}}</text>
+            <text style="padding-right: 20rpx;">{{item.dateStr}}</text>
+            <view hidden="{{item.clickCount==0}}">(浏览次数:
+              <text class="numColor">{{item.clickCount}}</text>
+              <text>)</text>
+            </view>
+          </view>
+          <view class="listTel"  bindtap="call" data-index="{{idx}}"  wx:if="{{item.tel.length>0}}">
+            <image class="telImage"src="{{imgPath}}tel1.png"></image>
+            <text hidden="{{item.telCount==0}}" class="numColor">{{item.telCount}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

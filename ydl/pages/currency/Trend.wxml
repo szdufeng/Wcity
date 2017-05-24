@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="titleView">
+    <view>
+      <text>{{fromname}}--{{toname}}</text>
+    </view>
+    <view>
+      <text>兑换数量：{{amount}}</text>
+    </view>
+  </view>
+  <view class="titleView">
+    <view>
+      <button bindtap="bindhour" type="{{btnHourType}}" size="mini">小时走势</button>
+    </view>
+    <view>
+      <button bindtap="bindday" type="{{btnDayType}}" size="mini">日走势</button>
+    </view>
+    <view>
+      <button bindtap="bindmonth" type="{{btnMonthType}}" size="mini">月走势</button>
+    </view>
+  </view>
+  <view class="wxchartView">
+    <canvas style="width: 100%; height: 400px; " canvas-id="lineCanvas"></canvas>
+  </view>
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <text style=" padding-right: 20rpx;">货币汇率数据来源于和讯，仅作参考，每小时更新一次</text>
+  </view>
+</view>
